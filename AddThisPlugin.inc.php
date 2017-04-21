@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/addThis/AddThisPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University Library
+ * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
@@ -24,7 +24,8 @@ class AddThisPlugin extends GenericPlugin {
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay'));
+				HookRegistry::register('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
+				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
 				// Register the components this plugin implements
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
 			}
