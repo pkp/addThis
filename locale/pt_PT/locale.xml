@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Esta lista apresenta os trabalhos mais partilhados da semana passada. Para obter todas as estatísticas, visite  o website <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> e inicie sessão.]]></message>
+	<message key="plugins.generic.addThis.grid.shares">Partilhas</message>
+	<message key="plugins.generic.addThis.grid.title">Links mais partilhados</message>
+	<message key="plugins.generic.addThis.form.registerLink"><![CDATA[<a href="https://www.addthis.com/register">Registe-se</a> gratuitamente para obter relatórios detalhados e perceber o comportamento dos trabalhos na web social.]]></message>
+	<message key="plugins.generic.addThis.settings.displayStyle">Escolha como o AddThis será apresentado</message>
+	<message key="plugins.generic.addThis.displayName">AddThis</message>
+	<message key="plugins.generic.addThis.description">Este plugin disponibiliza o serviço addThis para partilhar os trabalhos nas media sociais.</message>
+	<message key="plugins.generic.addThis.title">AddThis</message>
+	<message key="plugins.generic.addThis.settings">Configurações</message>
+	<message key="plugins.generic.addThis.settings.statistics">Estatísticas</message>
+	<message key="plugins.generic.addThis.form.saved">Configurações guardadas.</message>
+	<message key="plugins.generic.addThis.form.profileId">ID do perfil AddThis</message>
+	<message key="plugins.generic.addThis.form.username">Nome de Utilizador</message>
+	<message key="plugins.generic.addThis.form.password">Password (necessário para permitir apresentação de estatísticas)</message>
+</locale>
