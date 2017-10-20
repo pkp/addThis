@@ -12,7 +12,7 @@
   -->
 
 <locale name="pt_PT" full_name="Português (Portugal)">
-	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Esta lista apresenta os trabalhos mais partilhados da semana passada. Para obter todas as estatísticas, visite  o website <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> e inicie sessão.]]></message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Esta lista apresenta os trabalhos mais partilhados da semana passada. Para obter todas as estatísticas, visite  o website <a href="https://www.addthis.com/dashboard" target="_blank">AddThis Dashboard</a> e inicie sessão.]]></message>
 	<message key="plugins.generic.addThis.grid.shares">Partilhas</message>
 	<message key="plugins.generic.addThis.grid.title">Links mais partilhados</message>
 	<message key="plugins.generic.addThis.form.registerLink"><![CDATA[<a href="https://www.addthis.com/register">Registe-se</a> gratuitamente para obter relatórios detalhados e perceber o comportamento dos trabalhos na web social.]]></message>
