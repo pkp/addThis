@@ -16,7 +16,7 @@
 <p>{translate key="plugins.generic.addThis.statistics.instructions"}</p>
 
 <form class="pkp_form" id="statisticsDisplayForm">
-	{url|assign:addThisStatisticsGridUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.addThis.controllers.grid.AddThisStatisticsGridHandler" op="fetchGrid" escape=false}
+	{capture assign="addThisStatisticsGridUrl"}{url router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.addThis.controllers.grid.AddThisStatisticsGridHandler" op="fetchGrid" escape=false}{/assign}
 	{load_url_in_div id="addThisStatisticsGridContainer" url=$addThisStatisticsGridUrl}
 	{fbvElement type="button" id="cancelFormButton" label="common.close"}
 </form>
