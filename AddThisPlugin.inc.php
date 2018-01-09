@@ -28,6 +28,7 @@ class AddThisPlugin extends GenericPlugin {
 				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
 				// Register the components this plugin implements
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -77,7 +78,7 @@ class AddThisPlugin extends GenericPlugin {
 	 * @copydoc PKPPlugin::getTemplatePath
 	 */
 	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**
