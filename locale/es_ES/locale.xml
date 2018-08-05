@@ -16,7 +16,7 @@
 	<message key="plugins.generic.addThis.displayName">AddThis</message>
 	<message key="plugins.generic.addThis.description">Este complemento permite el uso compartido de addthis en las redes sociales para las propuestas</message>
 	<message key="plugins.generic.addThis.title">AddThis</message>
-	<message key="plugins.generic.addThis.settings">Preferéncias</message>
+	<message key="plugins.generic.addThis.settings">Preferencias</message>
 	<message key="plugins.generic.addThis.settings.statistics">Estadísticas</message>
 
 	<!-- AddThis form locale keys and messages -->
