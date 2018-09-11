@@ -30,5 +30,5 @@
 	<!-- AddThis grid keys (only a few, since the grid does very little) -->
 	<message key="plugins.generic.addThis.grid.shares">Jaot</message>
 	<message key="plugins.generic.addThis.grid.title">Eniten jaettu</message>
-	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Tämä lista näyttää kuluneen viikon eniten jaetut linkit. Koko statistiikka näkyy <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> sivustolla. Kirjaudu omilla tunnuksillasi.]]></message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Tämä lista näyttää kuluneen viikon eniten jaetut linkit. Koko statistiikka näkyy <a href="https://www.addthis.com/dashboard" target="_blank">AddThis Dashboard</a> sivustolla. Kirjaudu omilla tunnuksillasi.]]></message>
 </locale>

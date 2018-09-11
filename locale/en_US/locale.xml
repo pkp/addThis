@@ -30,5 +30,5 @@
 	<!-- AddThis grid keys (only a few, since the grid does very little) -->
 	<message key="plugins.generic.addThis.grid.shares">Shares</message>
 	<message key="plugins.generic.addThis.grid.title">Top Shared Links</message>
-	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[This list shows your most popular shared links for the past week. For all of the possible AddThis statistics, please visit the <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> website and log in.]]></message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[This list shows your most popular shared links for the past week. For all of the possible AddThis statistics, please visit the <a href="https://www.addthis.com/dashboard" target="_blank">AddThis Dashboard</a> website and log in.]]></message>
 </locale>

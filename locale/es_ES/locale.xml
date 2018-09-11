@@ -30,5 +30,5 @@
 	<!-- AddThis grid keys (only a few, since the grid does very little) -->
 	<message key="plugins.generic.addThis.grid.shares">Compartidos</message>
 	<message key="plugins.generic.addThis.grid.title">Enlaces más compartidos</message>
-	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Esta lista muestra los enlaces más compartidos durante la última semana. Para visualizar todas las estadísticas de AddThis, visite el sitio web <a href="http://www.addthis.com/analytics" target="_blank">AddThis Analytics</a> e inicie sesión.]]></message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[Esta lista muestra los enlaces más compartidos durante la última semana. Para visualizar todas las estadísticas de AddThis, visite el sitio web <a href="https://www.addthis.com/dashboard" target="_blank">AddThis Dashboard</a> e inicie sesión.]]></message>
 </locale>
