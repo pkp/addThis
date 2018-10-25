@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/addThis/locale/uk_UA/locale.xml
+  *
+  * Copyright (c) 2014-2018 Simon Fraser University
+  * Copyright (c) 2003-2018 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this plugin.
+  *
+  -->
+
+<locale name="uk_UA" full_name="Українська">
+	<message key="plugins.generic.addThis.displayName">AddThis</message>
+	<message key="plugins.generic.addThis.description">Цей плагін дозволяє використовувати систему поширення в соціальних мережах AddThis.</message>
+	<message key="plugins.generic.addThis.title">AddThis</message>
+	<message key="plugins.generic.addThis.settings">Налаштування</message>
+	<message key="plugins.generic.addThis.settings.statistics">Статистика</message>
+
+	<!-- AddThis form locale keys and messages -->
+	<message key="plugins.generic.addThis.form.saved">Налаштування форми AddThis збережені.</message>
+	<message key="plugins.generic.addThis.form.profileId">ID профілю AddThis</message>
+	<message key="plugins.generic.addThis.form.username">Ім'я користувача AddThis</message>
+	<message key="plugins.generic.addThis.form.password">Пароль AddThis (необхідний для відображення статистики)</message>
+	<message key="plugins.generic.addThis.form.registerLink"><![CDATA[<a href="https://www.addthis.com/register">Зареєструватися</a> для отримання безкоштовних звітів з докладною аналітикою щодо трафіку.]]></message>
+	<message key="plugins.generic.addThis.settings.displayStyle">Будь ласка, оберіть зовнішній вигляд AddThis</message>
+
+	<!-- AddThis grid keys (only a few, since the grid does very little) -->
+	<message key="plugins.generic.addThis.grid.shares">Поширення</message>
+	<message key="plugins.generic.addThis.grid.title">Найбільш поширювані посилання</message>
+	<message key="plugins.generic.addThis.statistics.instructions"><![CDATA[У цьому списку відображені найбільш поширювані посилання за останній тиждень. Для перегляду всеможливої статистики AddThis, будь ласка, відвідайте <a href="https://www.addthis.com/dashboard" target="_blank">консоль AddThis</a> та увійдіть до системи.]]></message>
+</locale>
