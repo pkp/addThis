@@ -17,12 +17,10 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class AddThisPlugin extends GenericPlugin {
 	/**
-	 * Register the plugin.
-	 * @param $category string
-	 * @param $path string
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
 			if ($this->getEnabled()) {
 				HookRegistry::register('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
 				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
