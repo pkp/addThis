@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/addThis/AddThisStatisticsGridRow.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2000-2017 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AddThisStatisticsGridRow
@@ -16,13 +16,6 @@
 import('lib.pkp.classes.controllers.grid.GridRow');
 
 class AddThisStatisticsGridRow extends GridRow {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 	//
 	// Overridden methods from GridRow
 	//
@@ -42,4 +35,3 @@ class AddThisStatisticsGridRow extends GridRow {
 	}
 }
 
-?>

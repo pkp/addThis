@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/addThis/AddThisPlugin.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AddThisPlugin
@@ -75,13 +75,6 @@ class AddThisPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
-	}
-
-	/**
 	 * @copydoc Plugin::getActions()
 	 */
 	function getActions($request, $actionArgs) {
@@ -127,13 +120,13 @@ class AddThisPlugin extends GenericPlugin {
 						}
 						return new JSONMessage(true, $form->fetch($request));
 					case 'statistics':
-						return $templateMgr->fetchJson($this->getTemplatePath() . 'statistics.tpl');
+						return $templateMgr->fetchJson($this->getTemplateResource('statistics.tpl'));
 					default: assert(false);
 				}
 			case 'settings':
 				$templateMgr->assign('statsConfigured', $this->statsConfigured($context));
 				$templateMgr->assign('pluginName', $this->getName());
-				return $templateMgr->fetchJson($this->getTemplatePath() . 'settingsTabs.tpl');
+				return $templateMgr->fetchJson($this->getTemplateResource('settingsTabs.tpl'));
 
 		}
 		return parent::manage($args, $request);
@@ -157,7 +150,7 @@ class AddThisPlugin extends GenericPlugin {
 		$templateMgr->assign('addThisPassword', $context->getSetting('addThisPassword'));
 		$templateMgr->assign('addThisDisplayStyle', $context->getSetting('addThisDisplayStyle'));
 
-		$output .= $templateMgr->fetch($this->getTemplatePath() . 'addThis.tpl');
+		$output .= $templateMgr->fetch($this->getTemplateResource('addThis.tpl'));
 		return false;
 	}
 
@@ -174,4 +167,3 @@ class AddThisPlugin extends GenericPlugin {
 	}
 }
 
-?>

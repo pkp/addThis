@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/addThis/AddThisSettingsForm.inc.php
  *
- * Copyright (c) 2014-2017 Simon Fraser University
- * Copyright (c) 2003-2017 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AddThisSettingsForm
@@ -28,7 +28,7 @@ class AddThisSettingsForm extends Form {
 	 * @param $context Context
 	 */
 	function __construct($plugin, $context) {
-		parent::__construct($plugin->getTemplatePath() . 'settings.tpl');
+		parent::__construct($plugin->getTemplateResource('settings.tpl'));
 		$this->setContext($context);
 		$this->setPlugin($plugin);
 
@@ -115,12 +115,9 @@ class AddThisSettingsForm extends Form {
 		);
 
 		$templateMgr->assign('displayStyles', $displayStyles);
+		$templateMgr->assign($this->_data);
 
-		foreach ($this->_data as $key => $value) {
-			$templateMgr->assign($key, $value);
-		}
-
-		return $templateMgr->fetch($plugin->getTemplatePath() . 'settings.tpl');
+		return $templateMgr->fetch($plugin->getTemplateResource('settings.tpl'));
 	}
 
 	/**
@@ -150,4 +147,4 @@ class AddThisSettingsForm extends Form {
 		$context->updateSetting('addThisPassword', trim($this->getData('addThisPassword'), "\"\';"), 'string');
 	}
 }
-?>
+
