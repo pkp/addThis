@@ -135,9 +135,9 @@ class AddThisStatisticsGridHandler extends GridHandler {
 		$plugin = $this->getPlugin();
 		$context = $request->getContext();
 
-		$addThisProfileId = $context->getSetting('addThisProfileId');
-		$addThisUsername = $context->getSetting('addThisUsername');
-		$addThisPassword = $context->getSetting('addThisPassword');
+		$addThisProfileId = $context->getData('addThisProfileId');
+		$addThisUsername = $context->getData('addThisUsername');
+		$addThisPassword = $context->getData('addThisPassword');
 
 		$data = array();
 

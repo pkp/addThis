@@ -22,6 +22,7 @@ class AddThisPlugin extends GenericPlugin {
 	function register($category, $path, $mainContextId = null) {
 		if (parent::register($category, $path, $mainContextId)) {
 			if ($this->getEnabled()) {
+				HookRegistry::register('Schema::get::context', array($this, 'addToSchema'));
 				HookRegistry::register('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
 				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
 				// Register the components this plugin implements
@@ -31,6 +32,29 @@ class AddThisPlugin extends GenericPlugin {
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * Add properties to the context schema
+	 *
+	 * @param $hookName string `Schema::get::context`
+	 * @param $args [[
+	 * 	@option object Context schema
+	 * ]]
+	 */
+	public function addToSchema($hookName, $args) {
+		$schema = $args[0];
+		$prop = '{
+			"type": "string",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		}';
+		$schema->properties->addThisProfileId = json_decode($prop);
+		$schema->properties->addThisUsername = json_decode($prop);
+		$schema->properties->addThisPassword = json_decode($prop);
+		$schema->properties->addThisDisplayStyle = json_decode($prop);
 	}
 
 	/**
@@ -143,10 +167,10 @@ class AddThisPlugin extends GenericPlugin {
 		$request = $this->getRequest();
 		$context = $request->getContext();
 
-		$templateMgr->assign('addThisProfileId', $context->getSetting('addThisProfileId'));
-		$templateMgr->assign('addThisUsername', $context->getSetting('addThisUsername'));
-		$templateMgr->assign('addThisPassword', $context->getSetting('addThisPassword'));
-		$templateMgr->assign('addThisDisplayStyle', $context->getSetting('addThisDisplayStyle'));
+		$templateMgr->assign('addThisProfileId', $context->getData('addThisProfileId'));
+		$templateMgr->assign('addThisUsername', $context->getData('addThisUsername'));
+		$templateMgr->assign('addThisPassword', $context->getData('addThisPassword'));
+		$templateMgr->assign('addThisDisplayStyle', $context->getData('addThisDisplayStyle'));
 
 		$output .= $templateMgr->fetch($this->getTemplateResource('addThis.tpl'));
 		return false;
@@ -158,9 +182,9 @@ class AddThisPlugin extends GenericPlugin {
 	 * @return boolean
 	 */
 	function statsConfigured($context) {
-		$addThisUsername = $context->getSetting('addThisUsername');
-		$addThisPassword = $context->getSetting('addThisPassword');
-		$addThisProfileId = $context->getSetting('addThisProfileId');
+		$addThisUsername = $context->getData('addThisUsername');
+		$addThisPassword = $context->getData('addThisPassword');
+		$addThisProfileId = $context->getData('addThisProfileId');
 		return (isset($addThisUsername) && isset($addThisPassword) && isset($addThisProfileId));
 	}
 }

@@ -84,10 +84,10 @@ class AddThisSettingsForm extends Form {
 
 		if (isset($plugin)) {
 			$this->_data = array(
-				'addThisProfileId' => $context->getSetting('addThisProfileId'),
-				'addThisUsername' => $context->getSetting('addThisUsername'),
-				'addThisPassword' => $context->getSetting('addThisPassword'),
-				'addThisDisplayStyle' => $context->getSetting('addThisDisplayStyle'),
+				'addThisProfileId' => $context->getData('addThisProfileId'),
+				'addThisUsername' => $context->getData('addThisUsername'),
+				'addThisPassword' => $context->getData('addThisPassword'),
+				'addThisDisplayStyle' => $context->getData('addThisDisplayStyle'),
 			);
 		}
 	}
@@ -131,20 +131,30 @@ class AddThisSettingsForm extends Form {
 			'addThisPassword',
 			'addThisProfileId',
 		));
+		foreach ($this->_data as $key => $value) {
+			$this->_data[$key] = trim($value);
+		}
 	}
 
 	/**
 	 * Save the plugin's data.
 	 * @see Form::execute()
 	 */
-	function execute() {
-		$plugin = $this->getPlugin();
-		$context = $this->getContext();
+	function execute(...$functionArgs) {
+		$newContext = Services::get('context')->edit(
+			$this->getContext(),
+			[
+				'addThisDisplayStyle' => trim($this->getData('addThisDisplayStyle')),
+				'addThisProfileId' => trim($this->getData('addThisProfileId')),
+				'addThisUsername' => trim($this->getData('addThisUsername')),
+				'addThisPassword' => trim($this->getData('addThisPassword')),
+			],
+			Application::get()->getRequest()
+		);
 
-		$context->updateSetting('addThisDisplayStyle', trim($this->getData('addThisDisplayStyle'), "\"\';"), 'string');
-		$context->updateSetting('addThisProfileId', trim($this->getData('addThisProfileId'), "\"\';"), 'string');
-		$context->updateSetting('addThisUsername', trim($this->getData('addThisUsername'), "\"\';"), 'string');
-		$context->updateSetting('addThisPassword', trim($this->getData('addThisPassword'), "\"\';"), 'string');
+		$this->setContext($newContext);
+
+		return parent::execute(...$functionArgs);
 	}
 }
 
