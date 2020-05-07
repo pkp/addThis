@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-07 10:38+0000\n"
-"Last-Translator: Akin Ayturan <akinayturan@gmail.com>\n"
+"PO-Revision-Date: 2020-05-08 17:38+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/addthis/"
 "tr_TR/>\n"
 "Language: tr\n"
@@ -11,11 +11,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.generic.addThis.title"
 msgstr "AddThis Eklentisi"
 
-#, fuzzy
 msgid "plugins.generic.addThis.displayName"
 msgstr "AddThis Eklentisi"
 
