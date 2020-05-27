@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-18 19:36+0000\n"
+"PO-Revision-Date: 2020-05-12 15:38+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
 "helene.vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/plugins/"
@@ -53,7 +53,7 @@ msgid "plugins.generic.addThis.settings"
 msgstr "Paramètres"
 
 msgid "plugins.generic.addThis.title"
-msgstr "AddThis"
+msgstr "Plugiciel AddThis"
 
 msgid "plugins.generic.addThis.description"
 msgstr ""
@@ -61,4 +61,4 @@ msgstr ""
 "soumissions sur les médias sociaux."
 
 msgid "plugins.generic.addThis.displayName"
-msgstr "AddThis"
+msgstr "Plugiciel AddThis"
