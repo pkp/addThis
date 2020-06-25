@@ -25,6 +25,7 @@ class AddThisPlugin extends GenericPlugin {
 				HookRegistry::register('Schema::get::context', array($this, 'addToSchema'));
 				HookRegistry::register('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
 				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
+				HookRegistry::register('Templates::Preprint::Details', array($this, 'callbackSharingDisplay')); // OPS
 				// Register the components this plugin implements
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
 				$this->_registerTemplateResource();
