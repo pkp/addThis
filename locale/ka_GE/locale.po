@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-01 10:55+0000\n"
+"PO-Revision-Date: 2021-04-08 09:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
 "Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
 "addthis/ka_GE/>\n"
@@ -16,3 +16,47 @@ msgstr "პარამეტრები"
 
 msgid "plugins.generic.addThis.grid.shares"
 msgstr "გაზიარებები"
+
+msgid "plugins.generic.addThis.displayName"
+msgstr "AddThis პლაგინი"
+
+msgid "plugins.generic.addThis.description"
+msgstr ""
+"ეს პლაგინი უზრუნველყოფს addThis სოციალურ მედიაში გაზიარებას გაგზავნისთვის."
+
+msgid "plugins.generic.addThis.title"
+msgstr "AddThis პლაგინი"
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "სტატისტიკა"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "AddThis ფორმის პარამეტრები შენახულია."
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "AddThis პროფილის იდენტიფიკატორი"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "AddThis მომხმარებლის სახელი"
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "AddThis პაროლი (აუცილებელია სტატისტიკის ჩვენებისთვის)"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">დარეგისტრირდით</a> უფასო "
+"სიღრმისეული ანალიტიკის ანგარიშებისთვის და უკეთ გაიგეთ თქვენი საიტის "
+"სოციალური ტრაფიკი."
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "გთხოვთ, აირჩიოთ როგორ უნდა გამოჩნდეს AddThis"
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "ყველაზე პოპულარული ბმულები"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"ამ სიაში მოცემულია თქვენი ყველაზე პოპულარული გაზიარებული ბმულები გასული "
+"კვირის განმავლობაში. ყველა შესაძლო AddThis სტატისტიკისთვის, ეწვიეთ <a href=\""
+"https://www.addthis.com/dashboard\" target=\"_blank\">AddThis Dashboard</a> "
+"ვებსაიტს და შედით სისტემაში."
