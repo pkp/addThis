@@ -1,0 +1,63 @@
+# Studiorimau <studiorimau@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-10-26 00:23+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/addthis/"
+"ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"Senarai ini menunjukkan pautan kongsi paling popular anda selama seminggu "
+"terakhir. Untuk semua kemungkinan statistik AddThis, sila lawati laman web <"
+"a href=\"https://www.addthis.com/dashboard\" target=\"_blank\"> AddThis "
+"Dashboard </a> dan log masuk."
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "Pautan Dikongsi Paling Popular"
+
+msgid "plugins.generic.addThis.grid.shares"
+msgstr "Kongsi"
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "Sila pilih cara AddThis harus dipaparkan"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">Daftar</a> untuk mendapatkan "
+"laporan analitis mendalam percuma dan lebih memahami trafik sosial laman "
+"anda."
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "Kata laluan addThis (diperlukan untuk menampilkan statistik)"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "AddThis Nama pengguna"
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "ID Profil AddThis"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "AddThis tetapan borang ini disimpan."
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "Statistik"
+
+msgid "plugins.generic.addThis.settings"
+msgstr "Tetapan"
+
+msgid "plugins.generic.addThis.title"
+msgstr "Plugin AddThis"
+
+msgid "plugins.generic.addThis.description"
+msgstr ""
+"Plugin ini menyediakan perkongsian media sosial addThis untuk penyerahan."
+
+msgid "plugins.generic.addThis.displayName"
+msgstr "Plugin AddThis"

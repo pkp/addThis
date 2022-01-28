@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-17 11:33+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"addthis/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"Esta lista mostra as ligazóns compartidas máis populares da semana pasada. "
+"Para ver todas as estatísticas de AddThis, visite o sitio web <a href=\""
+"https://www.addthis.com/dashboard\" target=\"_blank\">AddThis Dashboard</a> "
+"e inicie sesión."
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "Ligazóns máis compartidas"
+
+msgid "plugins.generic.addThis.grid.shares"
+msgstr "Comparticións"
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "Escolla como debería mostrar AddThis"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">Rexístrese</a> para obter "
+"informes de análise en profundidade e comprender mellor o tráfico social do "
+"seu sitio."
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "Contrasinal de AddThis (requírese para amosar estatísticas)"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "Nome do usuario/a de AddThis"
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "Identificación do perfil AddThis"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "Axustes do formulario AddThis gardados."
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "Estatísticas"
+
+msgid "plugins.generic.addThis.settings"
+msgstr "Axustes"
+
+msgid "plugins.generic.addThis.title"
+msgstr "Complemento AddThis"
+
+msgid "plugins.generic.addThis.description"
+msgstr ""
+"Este complemento AddThis fornece a compartición dos envíos nas redes sociais."
+
+msgid "plugins.generic.addThis.displayName"
+msgstr "Complemento AddThis"
