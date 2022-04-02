@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-01 09:51+0000\n"
+"PO-Revision-Date: 2022-04-03 12:58+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
 "addthis/bg_BG/>\n"
@@ -14,3 +14,51 @@ msgstr ""
 
 msgid "plugins.generic.addThis.displayName"
 msgstr "Добавка (плъгин) AddThis"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"Този списък показва най-популярните ви споделени връзки за последната "
+"седмица. За всички възможни статистически данни за AddThis, моля, посетете "
+"уебсайта <a href=\"https://www.addthis.com/dashboard\" target=\"_blank\">"
+"AddThis Dashboard</a> и влезте."
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "Най-много споделяни връзки"
+
+msgid "plugins.generic.addThis.grid.shares"
+msgstr "Споделяния"
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "Моля, изберете как да се показва AddThis"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">Регистрирайте се</a> за "
+"безплатни задълбочени аналитични отчети и разбирайте по-добре социалния "
+"трафик на вашия сайт."
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "AddThis парола (необходима за показване на статистика)"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "AddThis потребител"
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "AddThis ID на профил"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "Настройките на формуляра AddThis са запазени."
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "Статистики"
+
+msgid "plugins.generic.addThis.settings"
+msgstr "Настройки"
+
+msgid "plugins.generic.addThis.title"
+msgstr "Добавка (плъгин) AddThis"
+
+msgid "plugins.generic.addThis.description"
+msgstr ""
+"Тази добавка (плъгин) предоставя addThis споделяне в социалните медии за "
+"подадени материали."
