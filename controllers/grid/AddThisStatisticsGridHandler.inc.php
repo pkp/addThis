@@ -13,8 +13,11 @@
  * @brief Handle addThis plugin requests for statistics.
  */
 
-// import grid base classes
-import('lib.pkp.classes.controllers.grid.GridHandler');
+use PKP\controllers\grid\GridHandler;
+use PKP\controllers\grid\GridColumn;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\file\FileWrapper;
+use PKP\security\Role;
 
 class AddThisStatisticsGridHandler extends GridHandler {
 	/** @var Plugin */
@@ -26,8 +29,8 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	function __construct() {
 		parent::__construct();
 		$this->addRoleAssignment(
-			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow')
+			[Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
+			['fetchGrid', 'fetchRow']
 		);
 	}
 
@@ -61,7 +64,6 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	 * @param $roleAssignments array
 	 */
 	function authorize($request, &$args, $roleAssignments) {
-		import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
 		$this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 		return parent::authorize($request, $args, $roleAssignments);
 	}
@@ -71,14 +73,6 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	 */
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
-
-		// Load submission-specific translations
-		AppLocale::requireComponents(
-			LOCALE_COMPONENT_PKP_SUBMISSION,
-			LOCALE_COMPONENT_PKP_USER,
-			LOCALE_COMPONENT_APP_DEFAULT,
-			LOCALE_COMPONENT_PKP_DEFAULT
-		);
 
 		$plugin = $this->getPlugin();
 		$plugin->addLocaleData();
@@ -96,7 +90,7 @@ class AddThisStatisticsGridHandler extends GridHandler {
 			null,
 			null,
 			$cellProvider,
-			array('width' => 50, 'alignment' => COLUMN_ALIGNMENT_LEFT)
+			array('width' => 50, 'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT)
 		);
 
 		$gridColumn->addFlag('html', true);
@@ -146,7 +140,6 @@ class AddThisStatisticsGridHandler extends GridHandler {
 				'&username='.urlencode($addThisUsername).
 				'&password='.urlencode($addThisPassword);
 
-			import('lib.pkp.classes.file.FileWrapper');
 			$wrapper = FileWrapper::wrapper($topSharedUrls);
 			$jsonData = $wrapper->contents();
 

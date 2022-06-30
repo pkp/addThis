@@ -13,7 +13,7 @@
  * @brief Form for adding/editing the settings for the AddThis plugin
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class AddThisSettingsForm extends Form {
 	/** @var Context The press associated with the plugin being edited */
@@ -33,8 +33,8 @@ class AddThisSettingsForm extends Form {
 		$this->setPlugin($plugin);
 
 		// Validation checks for this form
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
+		$this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+		$this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 	}
 
 	//
@@ -97,7 +97,7 @@ class AddThisSettingsForm extends Form {
 	 * @see Form::fetch()
 	 * @param $request PKPRequest
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$plugin = $this->getPlugin();
 		$context = $this->getContext();
 
@@ -117,7 +117,7 @@ class AddThisSettingsForm extends Form {
 		$templateMgr->assign('displayStyles', $displayStyles);
 		$templateMgr->assign($this->_data);
 
-		return $templateMgr->fetch($plugin->getTemplateResource('settings.tpl'));
+		return $templateMgr->fetch($plugin->getTemplateResource($template ?? 'settings.tpl'));
 	}
 
 	/**

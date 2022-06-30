@@ -12,8 +12,11 @@
  * @brief This plugin provides the AddThis social media sharing options for submissions.
  */
 
-
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\AjaxModal;
+use PKP\core\JSONMessage;
+use PKP\plugins\HookRegistry;
 
 class AddThisPlugin extends GenericPlugin {
 	/**
@@ -102,7 +105,6 @@ class AddThisPlugin extends GenericPlugin {
 	 */
 	function getActions($request, $actionArgs) {
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
 			$this->getEnabled()?array(
 				new LinkAction(
