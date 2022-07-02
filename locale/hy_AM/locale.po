@@ -1,8 +1,65 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-03 05:31+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/"
+"addthis/hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"Այս ցանկը ցույց է տալիս ձեր ամենահայտնի հղումները վերջին շաբաթվա ընթացքում: "
+"Բոլոր հնարավոր AddThis վիճակագրության համար այցելեք <a href=\""
+"https://www.addthis.com/dashboard\" target=\"_blank\">AddThis Dashboard</a> "
+"կայքը և մուտք գործեք."
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "Ամենաշատ կիսված հղումներ"
+
+msgid "plugins.generic.addThis.grid.shares"
+msgstr "Կիսումներ"
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "Խնդրում ենք ընտրել, թե ինչպես պետք է ցուցադրվի AddThis-ը"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">Գրանցվեք</a> անվճար խորը "
+"վերլուծական հաշվետվությունների համար և ավելի լավ հասկացեք ձեր կայքի "
+"սոցիալական տրաֆիկը:"
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "AddThis գաղտնաբառ (պահանջվում է վիճակագրության ցուցադրման համար)"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "AddThis օգտանուն"
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "AddThis պրոֆայլի ID"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "AddThis ձևի կարգավորումները պահված են:"
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "Վիճակագրություն"
+
+msgid "plugins.generic.addThis.settings"
+msgstr "Կարգավորումներ"
+
+msgid "plugins.generic.addThis.title"
+msgstr "AddThis փլագին"
+
+msgid "plugins.generic.addThis.description"
+msgstr ""
+"Այս փլագինը տրամադրում է addThis սոցիալական մեդիայի կիսում ներկայացումների "
+"համար:"
+
+msgid "plugins.generic.addThis.displayName"
+msgstr "AddThis փլագին"
