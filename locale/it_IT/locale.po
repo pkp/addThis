@@ -1,11 +1,12 @@
 # Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
+# Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-25T16:03:51+00:00\n"
-"PO-Revision-Date: 2022-01-28 17:33+0000\n"
-"Last-Translator: Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>\n"
+"PO-Revision-Date: 2022-08-18 17:33+0000\n"
+"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/plugins/addthis/"
 "it_IT/>\n"
 "Language: it_IT\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.addThis.displayName"
 msgstr "AddThis Plugin"
@@ -36,10 +37,10 @@ msgid "plugins.generic.addThis.form.saved"
 msgstr "Impostazioni AddThis salvate."
 
 msgid "plugins.generic.addThis.form.profileId"
-msgstr "AddThis Profile ID"
+msgstr "Profilo ID AddThis"
 
 msgid "plugins.generic.addThis.form.username"
-msgstr "AddThis Username"
+msgstr "Nome Utente AddThis"
 
 msgid "plugins.generic.addThis.form.password"
 msgstr "AddThis Password (richiesta per mostrare le statistiche)"
