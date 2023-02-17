@@ -1,7 +1,7 @@
-# Viveka Svensson <viveka.svensson@lnu.se>, 2021.
+# Viveka Svensson <viveka.svensson@lnu.se>, 2021, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-25 12:05+0000\n"
+"PO-Revision-Date: 2022-07-08 01:56+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/addthis/"
 "sv_SE/>\n"
@@ -17,3 +17,42 @@ msgstr "AddThis plugin"
 
 msgid "plugins.generic.addThis.settings"
 msgstr "Inställningar"
+
+msgid "plugins.generic.addThis.settings.statistics"
+msgstr "Statistik"
+
+msgid "plugins.generic.addThis.title"
+msgstr "AddThis Plugin"
+
+msgid "plugins.generic.addThis.statistics.instructions"
+msgstr ""
+"Listan visar dina mest delade länkar under den senaste veckan. Vill du se "
+"all statistik från AddThis, klicka på <a href=\"https://www.addthis.com/"
+"dashboard\" target=\"_blank\">AddThis Dashboard</a> webbsida och logga in."
+
+msgid "plugins.generic.addThis.grid.title"
+msgstr "De mest delade länkarna"
+
+msgid "plugins.generic.addThis.grid.shares"
+msgstr "Dela"
+
+msgid "plugins.generic.addThis.settings.displayStyle"
+msgstr "Välj hur du vill att AddThis ska visas"
+
+msgid "plugins.generic.addThis.form.registerLink"
+msgstr ""
+"<a href=\"https://www.addthis.com/register\">Registera</a> dig för att få en "
+"detaljerad rapport gratis. Det ger dig bättre förståelse för din sidas "
+"sociala trafik."
+
+msgid "plugins.generic.addThis.form.password"
+msgstr "AddThis lösenord (krävs för att statistiken ska visas)"
+
+msgid "plugins.generic.addThis.form.username"
+msgstr "AddThis användarnamn"
+
+msgid "plugins.generic.addThis.form.profileId"
+msgstr "AddThis Profile ID"
+
+msgid "plugins.generic.addThis.form.saved"
+msgstr "AddThis inställningarna är sparad."
