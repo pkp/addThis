@@ -16,7 +16,7 @@ use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class AddThisPlugin extends GenericPlugin {
 	/**
@@ -25,12 +25,12 @@ class AddThisPlugin extends GenericPlugin {
 	function register($category, $path, $mainContextId = null) {
 		if (parent::register($category, $path, $mainContextId)) {
 			if ($this->getEnabled()) {
-				HookRegistry::register('Schema::get::context', array($this, 'addToSchema'));
-				HookRegistry::register('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
-				HookRegistry::register('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
-				HookRegistry::register('Templates::Preprint::Details', array($this, 'callbackSharingDisplay')); // OPS
+				Hook::add('Schema::get::context', array($this, 'addToSchema'));
+				Hook::add('Templates::Catalog::Book::Details', array($this, 'callbackSharingDisplay')); // OMP
+				Hook::add('Templates::Article::Details', array($this, 'callbackSharingDisplay')); // OJS
+				Hook::add('Templates::Preprint::Details', array($this, 'callbackSharingDisplay')); // OPS
 				// Register the components this plugin implements
-				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
+				Hook::add('LoadComponentHandler', array($this, 'setupGridHandler'));
 				$this->_registerTemplateResource();
 			}
 			return true;
