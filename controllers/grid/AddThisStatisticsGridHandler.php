@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @file controllers/grid/AddThisStatisticsGridHandler.inc.php
+ * @file controllers/grid/AddThisStatisticsGridHandler.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2023 Simon Fraser University
+ * Copyright (c) 2000-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * @class AddThisStatisticsGridHandler
@@ -13,46 +13,32 @@
  * @brief Handle addThis plugin requests for statistics.
  */
 
+namespace APP\plugins\generic\addThis\controllers\grid;
+
 use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\GridColumn;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\file\FileWrapper;
 use PKP\security\Role;
+use APP\core\Application;
+use APP\plugins\generic\addThis\AddThisPlugin;
+use Exception;
 
 class AddThisStatisticsGridHandler extends GridHandler {
-	/** @var Plugin */
-	static $_plugin;
+	protected AddThisPlugin $_plugin;
 
 	/**
 	 * Constructor
 	 */
-	function __construct() {
+	function __construct(AddThisPlugin $plugin) {
 		parent::__construct();
 		$this->addRoleAssignment(
 			[Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
 			['fetchGrid', 'fetchRow']
 		);
+		$this->_plugin = $plugin;
 	}
 
-
-	//
-	// Getters/Setters
-	//
-	/**
-	 * Get the plugin associated with this grid.
-	 * @return Plugin
-	 */
-	static function getPlugin() {
-		return self::$_plugin;
-	}
-
-	/**
-	 * Set the Plugin
-	 * @param $plugin Plugin
-	 */
-	static function setPlugin($plugin) {
-		self::$_plugin = $plugin;
-	}
 
 	//
 	// Overridden methods from PKPHandler
@@ -74,15 +60,11 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	function initialize($request, $args = null) {
 		parent::initialize($request, $args);
 
-		$plugin = $this->getPlugin();
-		$plugin->addLocaleData();
-
 		// Basic grid configuration
 
 		$this->setTitle('plugins.generic.addThis.grid.title');
 
 		// Columns
-		$plugin->import('controllers.grid.AddThisStatisticsGridCellProvider');
 		$cellProvider = new AddThisStatisticsGridCellProvider();
 		$gridColumn = new GridColumn(
 			'url',
@@ -117,8 +99,6 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	 * @return AddThisStatisticsGridRow
 	 */
 	function getRowInstance() {
-		$plugin = $this->getPlugin();
-		$plugin->import('AddThisStatisticsGridRow');
 		return new AddThisStatisticsGridRow();
 	}
 
@@ -126,28 +106,30 @@ class AddThisStatisticsGridHandler extends GridHandler {
 	 * @copydoc GridHandler::loadData
 	 */
 	function loadData($request, $filter = null) {
-		$plugin = $this->getPlugin();
 		$context = $request->getContext();
 
 		$addThisProfileId = $context->getData('addThisProfileId');
 		$addThisUsername = $context->getData('addThisUsername');
 		$addThisPassword = $context->getData('addThisPassword');
 
-		$data = array();
+		$data = [];
 
 		if (isset($addThisProfileId) && isset($addThisUsername) && isset($addThisPassword)) {
 			$topSharedUrls = 'https://api.addthis.com/analytics/1.0/pub/shares/url.json?period=week&pubid='.urlencode($addThisProfileId).
 				'&username='.urlencode($addThisUsername).
 				'&password='.urlencode($addThisPassword);
 
-			$wrapper = FileWrapper::wrapper($topSharedUrls);
-			$jsonData = $wrapper->contents();
+			try {
+				$jsonData = Application::get()->getHttpClient()->request('GET', $topSharedUrls)->getBody();
 
-			if ($jsonData != '') {
-				$jsonMessage = json_decode($jsonData);
-				foreach ($jsonMessage as $statElement) {
-					$data[] = array('url' => $statElement->url, 'shares' => $statElement->shares);
+				if ($jsonData != '') {
+					$jsonMessage = json_decode($jsonData);
+					foreach ($jsonMessage as $statElement) {
+						$data[] = ['url' => $statElement->url, 'shares' => $statElement->shares];
+					}
 				}
+			} catch (Exception $e) {
+				error_log('Unable to fetch the AddThis data for context ' . $context->getPath() . '. Check the AddThis plugin credentials and try again.');
 			}
 		}
 		return $data;

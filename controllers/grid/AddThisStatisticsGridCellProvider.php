@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/grid/AddThisStatisticsGridCellProvider.inc.php
+ * @file controllers/grid/AddThisStatisticsGridCellProvider.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -13,8 +13,11 @@
  * @brief Base class for a cell provider that can retrieve labels for AddThis stats.
  */
 
+namespace APP\plugins\generic\addThis\controllers\grid;
+
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridColumn;
+use PKP\core\PKPString;
 
 class AddThisStatisticsGridCellProvider extends DataObjectGridCellProvider {
 	//

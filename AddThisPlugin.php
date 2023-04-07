@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @file AddThisPlugin.inc.php
+ * @file AddThisPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2023 Simon Fraser University
+ * Copyright (c) 2003-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * @class AddThisPlugin
@@ -12,11 +12,16 @@
  * @brief This plugin provides the AddThis social media sharing options for submissions.
  */
 
+namespace APP\plugins\generic\addThis;
+
 use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\plugins\Hook;
+use APP\template\TemplateManager;
+
+use APP\plugins\generic\addThis\controllers\grid\AddThisStatisticsGridHandler;
 
 class AddThisPlugin extends GenericPlugin {
 	/**
@@ -68,10 +73,10 @@ class AddThisPlugin extends GenericPlugin {
 	 */
 	function setupGridHandler($hookName, $params) {
 		$component =& $params[0];
+		$componentInstance = & $params[2];
 		if ($component == 'plugins.generic.addThis.controllers.grid.AddThisStatisticsGridHandler') {
 			// Allow the static page grid handler to get the plugin object
-			import($component);
-			AddThisStatisticsGridHandler::setPlugin($this);
+			$componentInstance = new AddThisStatisticsGridHandler($this);
 			return true;
 		}
 		return false;
@@ -132,7 +137,6 @@ class AddThisPlugin extends GenericPlugin {
 			case 'showTab':
 				switch ($request->getUserVar('tab')) {
 					case 'settings':
-						$this->import('AddThisSettingsForm');
 						$form = new AddThisSettingsForm($this, $context);
 						if ($request->getUserVar('save')) {
 							$form->readInputData();
